@@ -32,4 +32,4 @@ jobs:
         username: '${{secrets.USERNAME}}'
         password: '${{secrets.PASSWORD}}'
       run: |
-        checkin.py
+        python3: checkin.py
