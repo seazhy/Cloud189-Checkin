@@ -2,10 +2,9 @@ import time
 import re
 import json
 import base64
-#import hashlib
-#import urllib.parse,hmac
 import rsa
 import requests
+import argparse
 
 
 
@@ -126,7 +125,7 @@ def login(username, password):
 
 
 def main():
-    s=login($username, $password)
+    s=login(args.username, args.password)
 
     rand = str(round(time.time() * 1000))
     surl = f'https://api.cloud.189.cn/mkt/userSign.action?rand={rand}&clientType=TELEANDROID&version=8.6.3&model=SM-G930K'
@@ -149,4 +148,8 @@ def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='输入账户信息')
+    parser.add_argument('username', help='账户')
+    parser.add_argument('password', help='密码')
+    args = parser.parse_args()
     main()
