@@ -9,4 +9,4 @@
 
 Settings -> Secrets and Variables -> Actions -> Environment Secrets
 
-设置环境变量UERNAME和PASSWORD
+设置环境变量USERNAME和PASSWORD
